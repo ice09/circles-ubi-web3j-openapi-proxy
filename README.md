@@ -10,13 +10,13 @@ For more information, check the [Web3j-OpenAPI](https://docs.web3j.io/web3j_open
 
 ## Manual Modifications for Circles UBI Contracts
 
-1. `git clone https://github.com/CirclesUBI/circles-contracts.git`
-2. copy `https://github.com/OpenZeppelin/openzeppelin-contracts/blob/solc-0.7/contracts/math/SafeMath.sol` to `deps/SafeMath.sol`
-3. copy `https://github.com/OpenZeppelin/openzeppelin-contracts/blob/solc-0.7/contracts/util/Address.sol` to `deps/Address.sol`
-
-4. `epirus openapi new`
-5. start _Ganache_, set mnemonic to *test test ... junk*
-   * set default gas x10 in _Ganache_ (67219750)
+1. Clone `git clone https://github.com/CirclesUBI/circles-contracts.git`
+2. Copy `https://github.com/OpenZeppelin/openzeppelin-contracts/blob/solc-0.7/contracts/math/SafeMath.sol` to `deps/SafeMath.sol`
+3. Copy `https://github.com/OpenZeppelin/openzeppelin-contracts/blob/solc-0.7/contracts/util/Address.sol` to `deps/Address.sol`
+4. Change references in contracts to `SafeMath.sol` and `Address.sol` accordingly
+5. Start _Ganache_, set mnemonic to *test test ... junk*
+   * Set default gas x10 in _Ganache_ (67219750)
+6. Create new OpenAPI Web3j Gradle project: `epirus openapi new`
 
 ### Changes in `build.gradle`
 
