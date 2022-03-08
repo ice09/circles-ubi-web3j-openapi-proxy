@@ -1,0 +1,30 @@
+plugins {
+  id "org.web3j.openapi" version "4.8.1"
+}
+
+group 'io.epirus'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// For more options, check: https://github.com/web3j/web3j-openapi-gradle-plugin
+web3j {
+    generatedPackageName = 'dev.wickedenterprise'
+    addressBitLength = 160
+    excludedContracts = ['SafeMath','Address']
+    openapi {
+        contextPath = 'Web3App'
+    }
+}
+
+processResources {
+    from('swagger-ui-openapi') { into 'static' }
+}
+
+startScripts {
+    doLast {
+        windowsScript.text = windowsScript.text.replaceAll('set CLASSPATH=.*', 'set CLASSPATH=.;%APP_HOME%/lib/*')
+    }
+}
