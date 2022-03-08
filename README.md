@@ -1,11 +1,5 @@
 # Epirus-Generated OpenAPI project
 This is a generated [Web3j-OpenAPI](https://docs.web3j.io/web3j_openapi) project using the [Epirus-CLI](https://docs.epirus.io/).
-
-### Run the project
-```shell script
-$ epirus run rinkeby|ropsten
-```
-
 For more information, check the [Web3j-OpenAPI](https://docs.web3j.io/web3j_openapi) documentation.
 
 ## Manual Modifications for Circles UBI Contracts
@@ -41,8 +35,8 @@ startScripts {
 }
 ```
 
-* copy all Circles contracts (incl. changes from step 1..3) to `src/main/solidity`
-* `gradlew distZip`
+* Copy all Circles contracts (incl. changes from step 1..3) to `src/main/solidity`
+* Create distribution: `gradlew distZip`
 
 ### Run OpenAPI Circles Contracts Proxy
 
